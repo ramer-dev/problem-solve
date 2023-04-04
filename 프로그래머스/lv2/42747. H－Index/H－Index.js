@@ -1,11 +1,10 @@
 function solution(citations) {
+    var answer = 0;
     citations.sort((a,b) => a-b);
+    let max = citations.at(-1);
+    let min = citations[0]
     
-    for(let i = 0; i < citations.length; i++){
-        if(citations[i] >= citations.length -i){
-            return citations.length - i;
-        }
-    }
+    console.log(citations[Math.floor(citations.length/2)])
     
-    return 0;
+    return citations[Math.floor(citations.length/2)]
 }
